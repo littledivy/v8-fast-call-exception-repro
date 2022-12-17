@@ -8,6 +8,7 @@ fn setup() {
 
 fn main() {
   setup();
+  println!("V8 {}", v8::V8::get_version());
   let isolate = &mut v8::Isolate::new(Default::default());
   let mut scope = v8::HandleScope::new(isolate);
 
